@@ -1,0 +1,19 @@
+class Solution {
+public:
+    bool containsDuplicate(vector<int>& nums) {
+        map<int, bool>New_Map;
+
+
+        for(int i = 0; i < nums.size(); i++){
+
+            if (New_Map.find(nums.at(i)) != New_Map.end()) {
+                return true;
+            }
+            New_Map[nums.at(i)] = 1;
+
+        }
+
+        return false;
+
+    }
+};
